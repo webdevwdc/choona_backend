@@ -1,0 +1,50 @@
+<% layout(layout_directory+'/mainLayout') -%>
+<!-- begin:: Subheader -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title"> <%= page_title %> </h3>
+        <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+        <!-- <div class="kt-subheader__breadcrumbs">
+            <a href="<%= generateUrl('user.dashboard') %>" class="kt-subheader__breadcrumbs-home">Dashboard</a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active"><%= page_title %></span>
+        </div> -->
+    </div>
+</div>
+<!-- end:: Subheader -->
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="kt-portlet">
+                <form class="kt-form kt-form--label-right" action="<%= generateUrl('admin.updateProfile')%>" method="POST" id="frmMyProfile">
+                    <div class="kt-portlet__body">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Full Name:</label>
+                                <input type="text" name="full_name" id="full_name" class="form-control"
+                                    pattern="^[a-zA-Z\s]+$" placeholder="Enter full name"
+                                    value="<%= response.full_name %>">
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="">Email:</label>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Enter email" value="<%= response.email %>" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__foot">
+                        <div class="kt-form__actions">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="hidden" name="id" value="<%= response._id %>">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    <a href="<%= generateUrl('user.dashboard') %>" class="btn btn-secondary">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

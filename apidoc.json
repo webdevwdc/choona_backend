@@ -1,0 +1,9 @@
+{
+    "name": "Choona API documentation",
+    "version": "1.0.0",
+    "description": "API Choona",
+    "url": "http://104.211.229.156:1431/api",
+    "template": {
+        "forceLanguage": "en"
+    }
+}

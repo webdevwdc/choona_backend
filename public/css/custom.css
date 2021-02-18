@@ -1,0 +1,9 @@
+a[title="JavaScript charts"] {
+    display: none !important;
+}
+.amcharts-center-div{
+    padding-left: 0px !important;
+}
+.datepicker.dropdown-menu {
+    z-index: 9999 !important;
+}
